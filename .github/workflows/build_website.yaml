@@ -23,6 +23,6 @@ jobs:
       - run: flutter test
 
       - name: Deploy 🚀
-        uses: squarethree/flutter-gh-pages@v7
+        uses: squarethree/flutter-gh-pages@v8
         with:
           baseHref: /flutter_website/
