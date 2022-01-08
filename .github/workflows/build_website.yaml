@@ -44,7 +44,7 @@ jobs:
       #  run: dart test
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: flutter build web
+        run: flutter build web --base-href '/flutter_website/'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.2.0
