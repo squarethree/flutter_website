@@ -25,4 +25,4 @@ jobs:
       - name: Deploy 🚀
         uses: bluefireteam/flutter-gh-pages@v7
         with:
-          baseHref: /registration-desk/
+          baseHref: /flutter_website/
