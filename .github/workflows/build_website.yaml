@@ -21,8 +21,8 @@ jobs:
       - uses: subosito/flutter-action@v2
       - run: flutter pub get
       - run: flutter test
-      
+
       - name: Deploy 🚀
-        uses: bluefireteam/flutter-gh-pages@v7
+        uses: squarethree/flutter-gh-pages@v7
         with:
           baseHref: /flutter_website/
