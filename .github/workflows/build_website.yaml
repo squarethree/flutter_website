@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
 
       # Note: This workflow uses the latest stable version of the Dart SDK.
       # You can specify other versions if desired, see documentation here:
@@ -39,11 +40,8 @@ jobs:
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
       # want to change this to 'flutter test'.
-      - name: Run tests
-        run: dart test
-
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.5.1
+      #- name: Run tests
+      #  run: dart test
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: flutter build web
