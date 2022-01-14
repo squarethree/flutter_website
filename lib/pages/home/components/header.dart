@@ -3,10 +3,10 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:web_portfolio/models/header_item.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/globals.dart';
-import 'package:web_portfolio/utils/screen_helper.dart';
+import 'package:flutter_website/models/header_item.dart';
+import 'package:flutter_website/utils/constants.dart';
+import 'package:flutter_website/utils/globals.dart';
+import 'package:flutter_website/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
   HeaderItem(

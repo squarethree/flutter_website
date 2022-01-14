@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:web_portfolio/pages/home/components/carousel.dart';
-import 'package:web_portfolio/pages/home/components/cv_section.dart';
-import 'package:web_portfolio/pages/home/components/education_section.dart';
-import 'package:web_portfolio/pages/home/components/footer.dart';
-import 'package:web_portfolio/pages/home/components/header.dart';
-import 'package:web_portfolio/pages/home/components/ios_app_ad.dart';
-import 'package:web_portfolio/pages/home/components/portfolio_stats.dart';
-import 'package:web_portfolio/pages/home/components/skill_section.dart';
-import 'package:web_portfolio/pages/home/components/sponsors.dart';
-import 'package:web_portfolio/pages/home/components/testimonial_widget.dart';
-import 'package:web_portfolio/pages/home/components/website_ad.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/utils/globals.dart';
+import 'package:flutter_website/pages/home/components/carousel.dart';
+import 'package:flutter_website/pages/home/components/cv_section.dart';
+import 'package:flutter_website/pages/home/components/education_section.dart';
+import 'package:flutter_website/pages/home/components/footer.dart';
+import 'package:flutter_website/pages/home/components/header.dart';
+import 'package:flutter_website/pages/home/components/ios_app_ad.dart';
+import 'package:flutter_website/pages/home/components/portfolio_stats.dart';
+import 'package:flutter_website/pages/home/components/skill_section.dart';
+import 'package:flutter_website/pages/home/components/sponsors.dart';
+import 'package:flutter_website/pages/home/components/testimonial_widget.dart';
+import 'package:flutter_website/pages/home/components/website_ad.dart';
+import 'package:flutter_website/utils/constants.dart';
+import 'package:flutter_website/utils/globals.dart';
 
 class Home extends StatelessWidget {
   @override
