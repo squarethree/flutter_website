@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
       endDrawer: Drawer(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 16.0,
               vertical: 24.0,
             ),
@@ -35,12 +35,12 @@ class Home extends StatelessWidget {
                             color: kDangerColor,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          padding: EdgeInsets.symmetric(horizontal: 28.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 28.0),
                           child: TextButton(
                             onPressed: headerItems[index].onTap,
                             child: Text(
                               headerItems[index].title,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 13.0,
                                 fontWeight: FontWeight.bold,
@@ -52,14 +52,14 @@ class Home extends StatelessWidget {
                     : ListTile(
                         title: Text(
                           headerItems[index].title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                           ),
                         ),
                       );
               },
               separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(
+                return const SizedBox(
                   height: 10.0,
                 );
               },
@@ -77,12 +77,12 @@ class Home extends StatelessWidget {
                 child: Header(),
               ),
               Carousel(),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               CvSection(),
               IosAppAd(),
-              SizedBox(
+              const SizedBox(
                 height: 70.0,
               ),
               WebsiteAd(),
@@ -90,19 +90,19 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 28.0),
                 child: PortfolioStats(),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50.0,
               ),
               EducationSection(),
-              SizedBox(
+              const SizedBox(
                 height: 50.0,
               ),
               SkillSection(),
-              SizedBox(
+              const SizedBox(
                 height: 50.0,
               ),
               Sponsors(),
-              SizedBox(
+              const SizedBox(
                 height: 50.0,
               ),
               TestimonialWidget(),

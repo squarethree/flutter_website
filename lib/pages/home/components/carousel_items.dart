@@ -21,7 +21,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               fontSize: 16.0,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 18.0,
           ),
           Text(
@@ -33,10 +33,10 @@ List<CarouselItemModel> carouselItems = List.generate(
               height: 1.3,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          Text(
+          const Text(
             "Full-stack developer, based in Barcelona",
             style: TextStyle(
               color: kCaptionColor,
@@ -44,13 +44,13 @@ List<CarouselItemModel> carouselItems = List.generate(
               height: 1.0,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
           Container(
             child: Wrap(
               children: [
-                Text(
+                const Text(
                   "Need a full custom website?",
                   style: TextStyle(
                     color: kCaptionColor,
@@ -60,7 +60,7 @@ List<CarouselItemModel> carouselItems = List.generate(
                 ),
                 GestureDetector(
                   onTap: () {},
-                  child: MouseRegion(
+                  child: const MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Text(
                       " Got a project? Let's talk.",
@@ -75,7 +75,7 @@ List<CarouselItemModel> carouselItems = List.generate(
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25.0,
           ),
           MouseRegion(
@@ -86,12 +86,12 @@ List<CarouselItemModel> carouselItems = List.generate(
                 borderRadius: BorderRadius.circular(8.0),
               ),
               height: 48.0,
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 28.0,
               ),
               child: TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "GET STARTED",
                   style: TextStyle(
                     color: Colors.white,

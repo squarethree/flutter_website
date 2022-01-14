@@ -37,7 +37,7 @@ final List<DesignProcess> designProcesses = [
 class CvSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: ScreenHelper(
         desktop: _buildUi(context, kDesktopMaxWidth),
@@ -84,16 +84,16 @@ class CvSection extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 50.0,
           ),
           Container(
             child: LayoutBuilder(
               builder: (_context, constraints) {
                 return ResponsiveGridView.builder(
-                  padding: EdgeInsets.all(0.0),
+                  padding: const EdgeInsets.all(0.0),
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   alignment: Alignment.topCenter,
                   gridDelegate: ResponsiveGridDelegate(
                     mainAxisSpacing: 20.0,
@@ -119,7 +119,7 @@ class CvSection extends StatelessWidget {
                                 designProcesses[index].imagePath,
                                 width: 40.0,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 15.0,
                               ),
                               Text(
@@ -132,12 +132,12 @@ class CvSection extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 15.0,
                           ),
                           Text(
                             designProcesses[index].subtitle,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: kCaptionColor,
                               height: 1.5,
                               fontSize: 14.0,

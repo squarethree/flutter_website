@@ -55,7 +55,7 @@ class IosAppAd extends StatelessWidget {
                             fontSize: 16.0,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15.0,
                         ),
                         Text(
@@ -67,10 +67,10 @@ class IosAppAd extends StatelessWidget {
                             fontSize: 35.0,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10.0,
                         ),
-                        Text(
+                        const Text(
                           "This is a random text about the project, I should have used the regular lorem ipsum text, but I am too lazy to search for that. This should be long enough",
                           style: TextStyle(
                             color: kCaptionColor,
@@ -78,7 +78,7 @@ class IosAppAd extends StatelessWidget {
                             fontSize: 15.0,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25.0,
                         ),
                         Row(
@@ -91,12 +91,12 @@ class IosAppAd extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 height: 48.0,
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                   horizontal: 28.0,
                                 ),
                                 child: TextButton(
                                   onPressed: () {},
-                                  child: Center(
+                                  child: const Center(
                                     child: Text(
                                       "EXPLORE MORE",
                                       style: TextStyle(
@@ -109,7 +109,7 @@ class IosAppAd extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10.0,
                             ),
                             MouseRegion(
@@ -122,10 +122,10 @@ class IosAppAd extends StatelessWidget {
                                   ),
                                 ),
                                 height: 48.0,
-                                padding: EdgeInsets.symmetric(horizontal: 28.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 28.0),
                                 child: TextButton(
                                   onPressed: () {},
-                                  child: Center(
+                                  child: const Center(
                                     child: Text(
                                       "NEXT APP",
                                       style: TextStyle(

@@ -65,14 +65,14 @@ class EducationSection extends StatelessWidget {
                 height: 1.3,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5.0,
             ),
             Wrap(
               children: [
                 Container(
-                  constraints: BoxConstraints(maxWidth: 400.0),
-                  child: Text(
+                  constraints: const BoxConstraints(maxWidth: 400.0),
+                  child: const Text(
                     "A full stack all round developer that does all the job he needs to do at all times. Actually this is a false statement",
                     style: TextStyle(
                       color: Colors.white,
@@ -82,7 +82,7 @@ class EducationSection extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 40.0,
             ),
             LayoutBuilder(
@@ -93,7 +93,7 @@ class EducationSection extends StatelessWidget {
                     runSpacing: 20.0,
                     children: educationList
                         .map(
-                          (education) => Container(
+                          (education) => SizedBox(
                             width: constraints.maxWidth / 2.0 - 20.0,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,19 +106,19 @@ class EducationSection extends StatelessWidget {
                                     fontSize: 20.0,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5.0,
                                 ),
                                 Text(
                                   education.description,
                                   maxLines: 4,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: kCaptionColor,
                                     height: 1.5,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20.0,
                                 ),
                                 MouseRegion(
@@ -127,13 +127,13 @@ class EducationSection extends StatelessWidget {
                                     onTap: () {},
                                     child: Text(
                                       education.linkName,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white,
                                       ),
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 40.0,
                                 )
                               ],

@@ -68,7 +68,7 @@ class HeaderRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveVisibility(
       visible: false,
-      visibleWhen: [
+      visibleWhen: const [
         Condition.largerThan(name: MOBILE),
       ],
       child: Row(
@@ -82,13 +82,13 @@ class HeaderRow extends StatelessWidget {
                           color: kDangerColor,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                             horizontal: 20.0, vertical: 5.0),
                         child: TextButton(
                           onPressed: item.onTap,
                           child: Text(
                             item.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
                               fontWeight: FontWeight.bold,
@@ -100,12 +100,12 @@ class HeaderRow extends StatelessWidget {
                   : MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: Container(
-                        margin: EdgeInsets.only(right: 30.0),
+                        margin: const EdgeInsets.only(right: 30.0),
                         child: GestureDetector(
                           onTap: item.onTap,
                           child: Text(
                             item.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
                               fontWeight: FontWeight.bold,
@@ -127,7 +127,7 @@ class Header extends StatelessWidget {
     return Container(
       child: ScreenHelper(
         desktop: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: buildHeader(),
         ),
         // We will make this in a bit
@@ -141,7 +141,7 @@ class Header extends StatelessWidget {
   Widget buildMobileHeader() {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -153,7 +153,7 @@ class Header extends StatelessWidget {
                 // Lets open drawer using global key
                 Globals.scaffoldKey.currentState.openEndDrawer();
               },
-              child: Icon(
+              child: const Icon(
                 FlutterIcons.menu_fea,
                 color: Colors.white,
                 size: 28.0,
@@ -168,7 +168,7 @@ class Header extends StatelessWidget {
   // Lets plan for mobile and smaller width screens
   Widget buildHeader() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
