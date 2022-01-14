@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_website/pages/home/components/carousel.dart';
 import 'package:flutter_website/pages/home/components/cv_section.dart';
 import 'package:flutter_website/pages/home/components/education_section.dart';
