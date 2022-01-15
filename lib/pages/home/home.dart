@@ -14,6 +14,8 @@ import 'package:flutter_website/utils/constants.dart';
 import 'package:flutter_website/utils/globals.dart';
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,47 +70,43 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Header(),
-              ),
-              Carousel(),
-              const SizedBox(
-                height: 20.0,
-              ),
-              CvSection(),
-              IosAppAd(),
-              const SizedBox(
-                height: 70.0,
-              ),
-              WebsiteAd(),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 28.0),
-                child: PortfolioStats(),
-              ),
-              const SizedBox(
-                height: 50.0,
-              ),
-              EducationSection(),
-              const SizedBox(
-                height: 50.0,
-              ),
-              SkillSection(),
-              const SizedBox(
-                height: 50.0,
-              ),
-              Sponsors(),
-              const SizedBox(
-                height: 50.0,
-              ),
-              TestimonialWidget(),
-              Footer(),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Header(),
+            Carousel(),
+            const SizedBox(
+              height: 20.0,
+            ),
+            const CvSection(),
+            const IosAppAd(),
+            const SizedBox(
+              height: 70.0,
+            ),
+            const WebsiteAd(),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 28.0),
+              child: PortfolioStats(),
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const EducationSection(),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const SkillSection(),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const Sponsors(),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const TestimonialWidget(),
+            const Footer(),
+          ],
         ),
       ),
     );

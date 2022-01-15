@@ -23,14 +23,14 @@ final List<Testimonial> testimonials = [
 ];
 
 class TestimonialWidget extends StatelessWidget {
+  const TestimonialWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ScreenHelper(
-        desktop: _buildUi(kDesktopMaxWidth),
-        tablet: _buildUi(kTabletMaxWidth),
-        mobile: _buildUi(getMobileMaxWidth(context)),
-      ),
+    return ScreenHelper(
+      desktop: _buildUi(kDesktopMaxWidth),
+      tablet: _buildUi(kTabletMaxWidth),
+      mobile: _buildUi(getMobileMaxWidth(context)),
     );
   }
 }
@@ -100,11 +100,9 @@ Widget _buildUi(double width) {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            child: Image.asset(
-                              "assets/quote.png",
-                              width: 50.0,
-                            ),
+                          Image.asset(
+                            "assets/quote.png",
+                            width: 50.0,
                           ),
                           const SizedBox(
                             height: 15.0,

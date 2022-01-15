@@ -7,6 +7,8 @@ import 'package:flutter_website/utils/screen_helper.dart';
 
 class Carousel extends StatelessWidget {
   final CarouselController carouselController = CarouselController();
+
+  Carousel({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *

@@ -25,34 +25,34 @@ List<HeaderItem> headerItems = [
 ];
 
 class HeaderLogo extends StatelessWidget {
+  const HeaderLogo({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: MouseRegion(
-        cursor: SystemMouseCursors.click,
-        child: GestureDetector(
-          onTap: () {},
-          child: RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "M",
-                  style: GoogleFonts.oswald(
-                    color: Colors.white,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: () {},
+        child: RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: "M",
+                style: GoogleFonts.oswald(
+                  color: Colors.white,
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                TextSpan(
-                  text: ".",
-                  style: GoogleFonts.oswald(
-                    color: kPrimaryColor,
-                    fontSize: 36.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ],
-            ),
+              ),
+              TextSpan(
+                text: ".",
+                style: GoogleFonts.oswald(
+                  color: kPrimaryColor,
+                  fontSize: 36.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
           ),
         ),
       ),
@@ -61,6 +61,8 @@ class HeaderLogo extends StatelessWidget {
 }
 
 class HeaderRow extends StatelessWidget {
+  const HeaderRow({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveVisibility(
@@ -119,18 +121,18 @@ class HeaderRow extends StatelessWidget {
 }
 
 class Header extends StatelessWidget {
+  const Header({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ScreenHelper(
-        desktop: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: buildHeader(),
-        ),
-        // We will make this in a bit
-        mobile: buildMobileHeader(),
-        tablet: buildHeader(),
+    return ScreenHelper(
+      desktop: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: buildHeader(),
       ),
+      // We will make this in a bit
+      mobile: buildMobileHeader(),
+      tablet: buildHeader(),
     );
   }
 
@@ -142,7 +144,7 @@ class Header extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            HeaderLogo(),
+            const HeaderLogo(),
             // Restart server to make icons work
             // Lets make a scaffold key and create a drawer
             GestureDetector(
@@ -168,7 +170,7 @@ class Header extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        children: const [
           HeaderLogo(),
           HeaderRow(),
         ],

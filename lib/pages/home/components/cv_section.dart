@@ -33,6 +33,8 @@ final List<DesignProcess> designProcesses = [
 ];
 
 class CvSection extends StatelessWidget {
+  const CvSection({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -85,70 +87,66 @@ class CvSection extends StatelessWidget {
           const SizedBox(
             height: 50.0,
           ),
-          Container(
-            child: LayoutBuilder(
-              builder: (_context, constraints) {
-                return ResponsiveGridView.builder(
-                  padding: const EdgeInsets.all(0.0),
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  alignment: Alignment.topCenter,
-                  gridDelegate: ResponsiveGridDelegate(
-                    mainAxisSpacing: 20.0,
-                    crossAxisSpacing: 20.0,
-                    maxCrossAxisExtent: ScreenHelper.isTablet(context) ||
-                            ScreenHelper.isMobile(context)
-                        ? constraints.maxWidth / 2.0
-                        : 250.0,
-                    // Hack to adjust child height
-                    childAspectRatio: ScreenHelper.isDesktop(context)
-                        ? 1
-                        : MediaQuery.of(context).size.aspectRatio * 1.5,
-                  ),
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+          LayoutBuilder(
+            builder: (_context, constraints) {
+              return ResponsiveGridView.builder(
+                padding: const EdgeInsets.all(0.0),
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                alignment: Alignment.topCenter,
+                gridDelegate: ResponsiveGridDelegate(
+                  mainAxisSpacing: 20.0,
+                  crossAxisSpacing: 20.0,
+                  maxCrossAxisExtent: ScreenHelper.isTablet(context) ||
+                          ScreenHelper.isMobile(context)
+                      ? constraints.maxWidth / 2.0
+                      : 250.0,
+                  // Hack to adjust child height
+                  childAspectRatio: ScreenHelper.isDesktop(context)
+                      ? 1
+                      : MediaQuery.of(context).size.aspectRatio * 1.5,
+                ),
+                itemBuilder: (BuildContext context, int index) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                designProcesses[index].imagePath,
-                                width: 40.0,
-                              ),
-                              const SizedBox(
-                                width: 15.0,
-                              ),
-                              Text(
-                                designProcesses[index].title,
-                                style: GoogleFonts.oswald(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
+                          Image.asset(
+                            designProcesses[index].imagePath,
+                            width: 40.0,
                           ),
                           const SizedBox(
-                            height: 15.0,
+                            width: 15.0,
                           ),
                           Text(
-                            designProcesses[index].subtitle,
-                            style: const TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 14.0,
+                            designProcesses[index].title,
+                            style: GoogleFonts.oswald(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
                             ),
                           )
                         ],
                       ),
-                    );
-                  },
-                  itemCount: designProcesses.length,
-                );
-              },
-            ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        designProcesses[index].subtitle,
+                        style: const TextStyle(
+                          color: kCaptionColor,
+                          height: 1.5,
+                          fontSize: 14.0,
+                        ),
+                      )
+                    ],
+                  );
+                },
+                itemCount: designProcesses.length,
+              );
+            },
           )
         ],
       ),
