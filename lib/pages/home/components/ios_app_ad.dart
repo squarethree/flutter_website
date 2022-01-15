@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter_website/utils/constants.dart';
 import 'package:flutter_website/utils/screen_helper.dart';
@@ -122,7 +120,8 @@ class IosAppAd extends StatelessWidget {
                                   ),
                                 ),
                                 height: 48.0,
-                                padding: const EdgeInsets.symmetric(horizontal: 28.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 28.0),
                                 child: TextButton(
                                   onPressed: () {},
                                   child: const Center(
