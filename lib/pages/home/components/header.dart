@@ -86,7 +86,7 @@ class HeaderRow extends StatelessWidget {
                         child: TextButton(
                           onPressed: item.onTap,
                           child: Text(
-                            item.title!,
+                            item.title,
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
@@ -103,7 +103,7 @@ class HeaderRow extends StatelessWidget {
                         child: GestureDetector(
                           onTap: item.onTap,
                           child: Text(
-                            item.title!,
+                            item.title,
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
@@ -153,7 +153,7 @@ class Header extends StatelessWidget {
                 Globals.scaffoldKey.currentState!.openEndDrawer();
               },
               child: const Icon(
-                FontAwesomeIcons.airbnb,
+                FontAwesomeIcons.bars,
                 color: Colors.white,
                 size: 28.0,
               ),
