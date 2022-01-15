@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
                           child: TextButton(
                             onPressed: headerItems[index].onTap,
                             child: Text(
-                              headerItems[index].title,
+                              headerItems[index].title!,
                               style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 13.0,
@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
                       )
                     : ListTile(
                         title: Text(
-                          headerItems[index].title,
+                          headerItems[index].title!,
                           style: const TextStyle(
                             color: Colors.white,
                           ),

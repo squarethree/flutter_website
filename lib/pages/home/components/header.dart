@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
 // ignore: import_of_legacy_library_into_null_safe
@@ -87,7 +86,7 @@ class HeaderRow extends StatelessWidget {
                         child: TextButton(
                           onPressed: item.onTap,
                           child: Text(
-                            item.title,
+                            item.title!,
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
@@ -104,7 +103,7 @@ class HeaderRow extends StatelessWidget {
                         child: GestureDetector(
                           onTap: item.onTap,
                           child: Text(
-                            item.title,
+                            item.title!,
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 13.0,
@@ -151,10 +150,10 @@ class Header extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 // Lets open drawer using global key
-                Globals.scaffoldKey.currentState.openEndDrawer();
+                Globals.scaffoldKey.currentState!.openEndDrawer();
               },
               child: const Icon(
-                FlutterIcons.menu_fea,
+                FontAwesomeIcons.airbnb,
                 color: Colors.white,
                 size: 28.0,
               ),
